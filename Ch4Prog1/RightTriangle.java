@@ -20,10 +20,22 @@ public class RightTriangle
         // Taking Inputs
         System.out.print("Please enter the first side of the triangle: ");
         a = reader.nextDouble();
+        while (a <= 0){
+            System.out.print("ERROR: Measurement must be positive: ");
+            a = reader.nextDouble();
+        }
         System.out.print("Please enter the second side of the triangle: ");
         b = reader.nextDouble();
+        while (b <= 0){
+            System.out.print("ERROR: Measurement must be positive: ");
+            b = reader.nextDouble();
+        }
         System.out.print("Please enter the third side of the triangle: ");
         c = reader.nextDouble();
+        while (c <= 0){
+            System.out.print("ERROR: Measurement must be positive: ");
+            c = reader.nextDouble();
+        }
         
         // Determining Sides
         if (c*c == a*a + b*b){
