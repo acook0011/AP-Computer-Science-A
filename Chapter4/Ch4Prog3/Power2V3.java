@@ -1,23 +1,25 @@
 package Chapter4.Ch4Prog3;
 
+
 /**
- * Displaying user-input powers of a specified base V.2
+ * Displaying user-input powers of a specified base V.3
  *
  * @aj
- * @cs4.8
+ * @cs4.9
  */
 
+import java.io.*;         
 import java.util.Scanner;
-public class Power2V2
+public class Power2V3
 {
-    public static void main(String [] args){
-    Scanner reader = new Scanner(System.in);
+    public static void main(String [] args) throws IOException {
+    Scanner reader = new Scanner(new File("powers.txt"));
     double power = 0,                   // (Input) Exponent power on base
            base = 0,                    // (Input) Number of base 
            result = 0;                  // (Output) Result of exponent power on base 
 
 // Calculations
-while (power != -1){
+while (reader.hasNext()){
     System.out.print("Enter the base: ");
     base = reader.nextDouble();
     System.out.print("Enter the exponent (-1 now to stop): ");
