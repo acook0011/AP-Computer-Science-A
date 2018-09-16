@@ -1,4 +1,4 @@
-package Ch4Prog2;
+package Chapter4.Ch4Prog2;
 
 /**
  * Find the cost of a phone call to Lexington, Virginia.

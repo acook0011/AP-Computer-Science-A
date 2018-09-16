@@ -1,4 +1,4 @@
-package Ch4Prog1;
+package Chapter4.Ch4Prog1;
 
 /**
  * Determining whether three sides of a triangle are those of a right angle.
