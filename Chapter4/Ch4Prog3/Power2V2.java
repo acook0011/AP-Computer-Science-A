@@ -29,7 +29,7 @@ while (power != -1){
         }else{
     while (power < 0){
      
-            System.out.print("Please enter a positive integer for the exponent: ");
+            System.out.print("Please enter a positive integer for the exponent value: ");
             power = reader.nextDouble();
         }
       
