@@ -19,10 +19,8 @@ public class Power2V3
            result = 0;                  // (Output) Result of exponent power on base 
 
 // Calculations
-while (reader.hasNext()){
-    System.out.print("Enter the base: ");
+while (reader.hasNext());
     base = reader.nextDouble();
-    System.out.print("Enter the exponent (-1 now to stop): ");
     power = reader.nextDouble();
     
     // Checks if need to leave
