@@ -1,4 +1,4 @@
-package Ch4Prog2;
+package Chapter4.Ch4Prog2;
 
 /**
  * The salaries of teachers over a period of time

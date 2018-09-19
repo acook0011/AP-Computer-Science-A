@@ -1,4 +1,4 @@
-package Ch4Prog2;
+package Chapter4.Ch4Prog2;
 
 
 /**

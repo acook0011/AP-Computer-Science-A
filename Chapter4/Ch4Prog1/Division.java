@@ -1,4 +1,4 @@
-package Ch4Prog1;
+package Chapter4.Ch4Prog1;
 
 /**
  * Dividing two numbers and returning quotient and remainder. 
