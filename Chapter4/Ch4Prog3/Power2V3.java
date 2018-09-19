@@ -19,7 +19,7 @@ public class Power2V3
            result = 0;                  // (Output) Result of exponent power on base 
 
 // Calculations
-while (reader.hasNext());
+while (reader.hasNext()){
     base = reader.nextDouble();
     power = reader.nextDouble();
     
