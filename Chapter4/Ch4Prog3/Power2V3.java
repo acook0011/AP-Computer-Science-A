@@ -2,7 +2,8 @@ package Chapter4.Ch4Prog3;
 
 
 /**
- * Displaying user-input powers of a specified base V.3
+ * Reads data from notepad "powers.txt" and 
+ * uses them for bringing bases to a certain degree V.3
  *
  * @aj
  * @cs4.9
