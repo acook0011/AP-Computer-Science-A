@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Student
+comment0.text=\ Student.java\r\nManage\ a\ student's\ name\ and\ three\ test\ scores.\r\n
+comment1.params=
+comment1.target=Student()
+comment10.params=
+comment10.target=java.lang.String\ validateData()
+comment11.params=
+comment11.target=java.lang.String\ toString()
+comment2.params=nm\ t1\ t2\ t3
+comment2.target=Student(java.lang.String,\ int,\ int,\ int)
+comment3.params=s
+comment3.target=Student(Student)
+comment4.params=nm
+comment4.target=void\ setName(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getName()
+comment6.params=i\ score
+comment6.target=void\ setScore(int,\ int)
+comment7.params=i
+comment7.target=int\ getScore(int)
+comment8.params=
+comment8.target=int\ getAverage()
+comment9.params=
+comment9.target=int\ getHighScore()
+numComments=12
