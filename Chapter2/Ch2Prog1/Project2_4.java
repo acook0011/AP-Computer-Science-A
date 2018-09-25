@@ -1,4 +1,4 @@
-package Chapter2;
+package Chapter2.Ch2Prog1;
 
 /**
  * @aj
