@@ -15,12 +15,12 @@ public class FractionTester
        
        //Order: n1, n2, d1, d2
        oneHalf = new Fraction(1, 1, 1, 2);
-          System.out.println("\nHere is the first fraction pair\n" + oneHalf);
+          System.out.println("\nHere is how one half affects the number one\n" + oneHalf);
        
        oneFourth = new Fraction(1, 1, 1, 4);
-          System.out.println("\nHere is the second fraction pair\n" + oneFourth);
+          System.out.println("\nHere is how one fourth affects the number one\n" + oneFourth);
           
        oneTenth = new Fraction(1, 1, 1, 10);
-          System.out.println("\nHere is the third fraction pair\n" + oneTenth);
+          System.out.println("\nHere is how one tenth affects the number one\n" + oneTenth);
     }
 }
