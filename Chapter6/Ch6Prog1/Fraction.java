@@ -102,7 +102,18 @@ public class Fraction
        division = (diviNum + "/" + diviDen);
        return division;
     }
+   
     
+   //Check Variables
+   public String validateData(){
+      //validate that no number is undefined
+      if (denominator1 == 0)
+          return "\nDenominator 1 must not be equal to 0\n";
+      else if (denominator2 == 0)
+          return "\nDenominator 2 must not be equal to 0\n";
+      else
+          return null;
+   }
    //Return String Representation
    public String toString(){
        String fct;
