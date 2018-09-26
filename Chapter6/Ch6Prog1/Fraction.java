@@ -2,127 +2,63 @@ package Chapter6.Ch6Prog1;
 
 
 /**
- * Manage two fractions and how they interact with each other
+ * Write a description of class FractionB here.
  *
- * @aj
- * @cs6.3
+ * @author (your name)
+ * @version (a version number or a date)
  */
 public class Fraction
 {
     //Instance variables
-   private int numerator1;              //Numerator in first fraction
-   private int numerator2;              //Numerator in second fraction
-   private int denominator1;            //Denominator in first fraction
-   private int denominator2;            //Denominator in second fraction
+   private int numerator;              //Numerator in first fraction
+   private int denominator;            //Denominator in first fraction
  
    
     //Default Constructor
     
     public Fraction(){
-       numerator1 = 0;
-       numerator2 = 0;
-       denominator1 = 0;
-       denominator2 = 0;
+       numerator = 1;
+       denominator = 1;
     }
     
     //Additional Constructor to values provided
-    public Fraction(int n1, int n2, int d1, int d2){
-      numerator1 = n1;
-      numerator2 = n2;
-      denominator1 = d1;
-      denominator2 = d2;
+    public Fraction(int n1,int d1){
+      numerator = n1;
+      denominator = d1;
    }
    
    //Additional Constructor to match parameters
    public Fraction(Fraction f){
-      numerator1 = f.numerator1;
-      numerator2 = f.numerator2;
-      denominator1 = f.denominator1;
-      denominator2 = f.denominator2;
+      numerator = f.numerator;
+      denominator = f.denominator;
    }
    
-   //Fraction Arithmetics
+   //Other Methods
    
-   //Establishing Fraction 1
-   public String firstFraction(){
-     int Num, Dem;
-     String first;
-     Num = numerator1;
-     Dem = denominator1;
-     first = (Num + "/" + Dem);
-     return first;
-    }
-    
-   //Establishing Fraction 2
-   public String secondFraction(){
-     int Num, Dem;
-     String second;
-     Num = numerator2;
-     Dem = denominator2;
-     second = (Num + "/" + Dem);
-     return second;
+   //Get Numerator
+   public int getNum(){
+       return numerator;
     }
    
-   //Addition
-   public String addFraction(){
-       int addNum, addDen;
-       String addition;
-       addNum = numerator1 * denominator2 + numerator2 * denominator1;
-       addDen = denominator1 * denominator2;
-       addition = (addNum + "/" + addDen);
-       return addition;
+   //Get Denominator
+   public int getDen(){
+       return denominator;  
     }
     
-   //Subtraction
-   public String subFraction(){
-       int subNum, subDen;
-       String subtraction;
-       subNum = numerator1 * denominator2 - numerator2 * denominator1;
-       subDen = denominator1 * denominator2;
-       subtraction = (subNum + "/" + subDen);
-       return subtraction;
+   public int add(Fraction f){
+       int sum = (numerator * f.denominator + f.numerator * denominator);
+       return sum;
     }
     
-   //Multiplication
-   public String multFraction(){
-       int multNum, multDen;
-       String multiplication;
-       multNum = numerator1 * numerator2;
-       multDen = denominator1 * denominator2;
-       multiplication = (multNum + "/" + multDen);
-       return multiplication;
+   public int subtract(Fraction f){
+       return 0;
+    }
+    
+   public int multiply(Fraction f){
+       return 0;
     }
    
-   //Division
-   public String diviFraction(){
-       int diviNum, diviDen;
-       String division;
-       diviNum = numerator1 * denominator2;
-       diviDen = denominator1 * numerator2;
-       division = (diviNum + "/" + diviDen);
-       return division;
-    }
-   
-    
-   //Check Variables
-   public String validateData(){
-      //validate that no number is undefined
-      if (denominator1 == 0)
-          return "\nDenominator 1 must not be equal to 0\n";
-      else if (denominator2 == 0)
-          return "\nDenominator 2 must not be equal to 0\n";
-      else
-          return null;
-   }
-   //Return String Representation
-   public String toString(){
-       String fct;
-       fct = "Fraction #1:    " + firstFraction()  + "\n" + 
-             "Fraction #2:    " + secondFraction() + "\n" +
-             firstFraction() + " + " + secondFraction() + " = " + addFraction() + "\n" +  //Addition
-             firstFraction() + " - " + secondFraction() + " = " + subFraction() + "\n" +  //Substraction
-             firstFraction() + " * " + secondFraction() + " = " + multFraction() + "\n" + //Multiplication
-             firstFraction() + " / " + secondFraction() + " = " + diviFraction();         //Division
-      return fct;
+   public int divide(Fraction f){
+       return 0;
     }
 }
