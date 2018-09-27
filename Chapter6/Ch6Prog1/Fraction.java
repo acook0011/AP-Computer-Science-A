@@ -45,20 +45,29 @@ public class Fraction
        return denominator;  
     }
     
-   public int add(Fraction f){
-       int sum = (numerator * f.denominator + f.numerator * denominator);
+   public Fraction add(Fraction f){
+       Fraction sum = new Fraction(numerator * f.denominator + f.numerator * denominator, denominator*f.denominator);
        return sum;
     }
     
-   public int subtract(Fraction f){
-       return 0;
+   public Fraction subtract(Fraction f){
+       Fraction diff = new Fraction (numerator * f.denominator - f.numerator * denominator, denominator * f. denominator);
+       return diff;
     }
     
-   public int multiply(Fraction f){
-       return 0;
+   public Fraction multiply(Fraction f){
+       Fraction prod = new Fraction (numerator * f.numerator, denominator * f.denominator);
+       return prod;
     }
    
-   public int divide(Fraction f){
-       return 0;
+   public Fraction divide(Fraction f){
+       Fraction quot = new Fraction (numerator * f.denominator, denominator * f.numerator);
+       return quot;
+    }
+    
+    public String toString(){
+     String str;
+     str = numerator + "/" + denominator;
+     return str;
     }
 }

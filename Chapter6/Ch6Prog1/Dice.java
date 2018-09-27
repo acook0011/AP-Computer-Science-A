@@ -23,30 +23,24 @@ package Chapter6.Ch6Prog1;
  * @aj
  * @cs6.4
  */
+
+import java.util.Random;
+
 public class Dice
 {
-    //Instance Variables
-    private int dice1, dice2;
+    int numDots;
+    Random generator = new Random();
 
-    //Default Constructor 
-    public Dice()
-    {
-        dice1 = 0;
-        dice2 = 0;
-    }
-
-    //Additional Constructors to values provided
-    public Dice(int r1, int r2)
-    {
-        dice1 = r1;
-        dice2 = r2;
+    public Dice(){
+        roll();
     }
     
-    //Additional Constructors to match parameters
-    public Dice(Dice d)
-    {
-       dice1 = d.dice1;
-       dice2 = d.dice2;
+    public int getNumDots(){
+        return numDots;
+    }
+    
+    public void roll(){
+        numDots = generator.nextInt(6) + 1;
     }
     
     
