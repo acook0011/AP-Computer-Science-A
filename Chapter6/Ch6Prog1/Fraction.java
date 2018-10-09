@@ -2,10 +2,10 @@ package Chapter6.Ch6Prog1;
 
 
 /**
- * Write a description of class FractionB here.
+ * Fraction class that performs arithmetic operations between fractions.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @aj
+ * @cs6.3
  */
 public class Fraction
 {
