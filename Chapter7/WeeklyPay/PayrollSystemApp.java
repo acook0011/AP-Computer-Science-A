@@ -47,17 +47,17 @@ public class PayrollSystemApp {
          // Get the hours worked until valid
          //   To illustrate the possibilities we compress this code 
          //   into a single hard-to-read statement. 
-         System.out.print("Hours worked (" + 
+         System.out.print("  Hours worked (" + 
                           emp.getHoursRules() + "): ");
          while (!emp.setHours(reader.nextInt()))
-                System.out.print("Hours worked (" + 
+                System.out.print("  Hours worked (" + 
                                  emp.getHoursRules() + "): ");
 
          // Consume the trailing newline
          reader.nextLine();
 
         // Print the name and pay
-        System.out.println("  The weekly pay for " + emp.getName() + 
+        System.out.println("The weekly pay for " + emp.getName() + 
                            " is $" + emp.getPay());
       }
    }
