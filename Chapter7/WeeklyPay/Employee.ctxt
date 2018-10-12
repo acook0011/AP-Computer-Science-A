@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Employee
+comment0.text=\ \ Employee.java\r\n1.\ Instance\ variables\:\ name,\ type,\ rate,\ hours\r\n2.\ Methods\ to\r\nget\ data\ validation\ rules\r\nset\ instance\ variables\ if\ data\ is\ valid\r\nget\ name\ and\ pay
+comment1.params=
+comment1.target=Employee()
+comment10.params=
+comment10.target=java.lang.String\ getName()
+comment11.params=
+comment11.target=double\ getPay()
+comment2.params=
+comment2.target=java.lang.String\ getNameRules()
+comment3.params=
+comment3.target=java.lang.String\ getTypeRules()
+comment4.params=
+comment4.target=java.lang.String\ getRateRules()
+comment5.params=
+comment5.target=java.lang.String\ getHoursRules()
+comment6.params=nm
+comment6.target=boolean\ setName(java.lang.String)
+comment7.params=tp
+comment7.target=boolean\ setType(int)
+comment8.params=rt
+comment8.target=boolean\ setRate(double)
+comment9.params=hrs
+comment9.target=boolean\ setHours(int)
+numComments=12
