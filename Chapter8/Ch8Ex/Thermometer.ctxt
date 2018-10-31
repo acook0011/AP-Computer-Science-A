@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Thermometer
+comment1.params=degrees
+comment1.target=void\ setCelsius(double)
+comment2.params=degrees
+comment2.target=void\ setFahrenheit(double)
+comment3.params=
+comment3.target=double\ getCelsius()
+comment4.params=
+comment4.target=double\ getFahrenheit()
+numComments=5
