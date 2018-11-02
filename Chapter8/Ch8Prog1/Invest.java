@@ -28,21 +28,36 @@ public class Invest
         // Taking Inputs
         System.out.println("Please input the money you'll be investing: ");
         intinvest = reader.nextDouble();
-        balance1 = intinvest;
-        balance2 = balance1;
+        while (intinvest < 0){
+            System.out.println("Please input a positive number: ");
+            intinvest = reader.nextDouble();
+        }
+        balance1 = intinvest;      // Setting variables for 
+        balance2 = balance1;       // beginning and ending totals per year
         System.out.println("Please input the percent interest of your plan: ");
         intrate = reader.nextDouble();
+        while (intrate < 0){
+            System.out.println("Please input a positive number: ");
+            intrate = reader.nextDouble();
+        }
         System.out.println("Please input the amount of time you will wait: ");
         year = reader.nextInt();
+        while (year < 0){
+            System.out.println("Please input a positive number: ");
+            year = reader.nextInt();
+        }
         
-        // Calculations
+        // Printing headers for the columns
+        System.out.println("");
+        System.out.printf("%-9s%-20s%-17s%-22s%n", "YEAR", "INT PRINCIPAL", "INTEREST", "END PRINCIPAL");
+        // Calculations + Printing columns 
         for (int yr = 1; yr <= year; yr++){
             balance1 = balance2;
-            System.out.println(yr + " " + balance1 + " ");
+
             balance2 = balance1 * Math.pow((1 + intrate/400),4);
             interest = balance2 - balance1;
-            
-            System.out.println(balance2); 
+            System.out.printf("%-8d$%,-19.2f$%,-16.2f$%,-22.2f%n", yr, balance1, interest, balance2);
+
         }
     }
 }
