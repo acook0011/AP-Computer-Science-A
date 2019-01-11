@@ -16,7 +16,7 @@ public class Mode
     public static void main(String [] args){
         Scanner reader = new Scanner(System.in);
         double[] inputs = new double[10];
-        double[] unique = new double[10];
+        double[] multiple = new double[10];
         int[] occur = new int[10];
         int count = 0;
         
@@ -29,9 +29,13 @@ public class Mode
         }
         
         // Checks if there are any duplicates
+        int multiCount = 0;
+        int totalCount = 0;
         for (double value : inputs){
             int dupCount = 0;
             boolean duplicate = false;
+            
+            // Initial if number not checked yet
             for (double value2 : inputs){
                 if (value == value2){
                     duplicate = true;
@@ -39,9 +43,12 @@ public class Mode
                 }
             }
             
-            if (!duplicate){
-                
+            // Declares which variables are duplicates
+            if (duplicate){
+                multiple[multiCount] = inputs[totalCount]; 
+                multiCount++;
             }
+            totalCount++;
         }
     }
     
