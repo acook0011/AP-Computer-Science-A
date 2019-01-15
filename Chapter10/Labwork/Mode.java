@@ -14,15 +14,24 @@ import java.util.Scanner;
 public class Mode
 {
     public static void main(String[] args) {
-        int[] nums=new int[10];
-        int[] numCount=new int[10];
-        int mode = findMode(nums, numCount);
+        int[] nums= new int[10];
+        int[] numCount= new int[10];
+        int[] modeNum= new int[10];
+        int maxValue = -1;  // Sets default value meant to later be replaced as mode
+        int mode = findMode(nums, numCount, modeNum);
         
-        // Prints out the found mode
-        System.out.println("The mode is: " + mode);
+        // Prints out the found modes
+        System.out.println("The mode(s) is: ");
+        for (int x = 0; x < modeNum.length; x++){
+            // Checks if value is equal to placeholder value. If yes, doesn't print
+            if (modeNum[x] != 2495325){
+            System.out.println(modeNum[x]);
+         }
+        }
+        System.out.println("If none or all print, there is no mode.");
     }
 
-    public static int findMode(int[] nums, int[] numCount){
+    public static int findMode(int[] nums, int[] numCount, int[] modeNum){
         Scanner scanner = new Scanner(System.in);
 
         int maxValue = -1;  // Sets default value meant to later be replaced as mode
@@ -40,7 +49,6 @@ public class Mode
         
         // Determines appearances of each number
         for (int i = 0; i < nums.length; i++) {
-            int count = 0;
             numCount[i] = 0; 
             // Will count itself in following program, so all numCount[i] = 1 at minimum
             for (int j = 0; j < nums.length; j++) {
@@ -52,12 +60,36 @@ public class Mode
             
             // Checks if number could be a new mode
             if (numCount[i] > maxCount) {
+
                 maxValue = nums[i];
                 maxCount = numCount[i];
+
             }
         }
         
-        return maxValue;
+        // Sets all values of modeNum to placeholder value
+        for (int i = 0; i <modeNum.length; i++){
+            modeNum[i] = 2495325;
+        }
+        
+        // After highest possible mode is determined, checks  if there are other modes
+        int x = -1; 
+        for (int i = 0; i < nums.length; i++) {
+            if (numCount[i] == maxCount) {
+                // To avoid duplicates in modeNum, sets all equivalent valeus to placeholder value
+                for (int y = 0; y < modeNum.length; y++){
+                    if (modeNum[y] == nums[i]){
+                        modeNum[y] = 2495325;
+                    }
+                }
+                x++;
+                modeNum[x] = nums[i];
+   
+            }
+        }
+        
+
+        return modeNum[x];
     }
-    }
+}
 
