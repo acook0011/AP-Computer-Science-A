@@ -13,48 +13,51 @@ import java.util.Scanner;
 
 public class Mode
 {
-    public static void main(String [] args){
-        Scanner reader = new Scanner(System.in);
-        double[] inputs = new double[10];
-        double[] multiple = new double[10];
-        int[] occur = new int[10];
-        int count = 0;
+    public static void main(String[] args) {
+        int[] nums=new int[10];
+        int[] numCount=new int[10];
+        int mode = findMode(nums, numCount);
+        
+        // Prints out the found mode
+        System.out.println("The mode is: " + mode);
+    }
+
+    public static int findMode(int[] nums, int[] numCount){
+        Scanner scanner = new Scanner(System.in);
+
+        int maxValue = -1;  // Sets default value meant to later be replaced as mode
+        int maxCount = 0;   // Sets highest count of duplicate numbers meant to be overtopped
+        int inputs = 0;     // Input from user entering numbers  
         
         // Takes in inputs
-        while (count < inputs.length){
-            count++;
-            System.out.println("Enter number #" + count + ":");
-            double number = reader.nextDouble();
-            inputs[count-1] = number;
+        System.out.println("Enter 10 numbers: ");
+        for (int i = 0; i < 10; i++) {
+            int total = i+1;
+            System.out.println("Insert number #" + total + ":");
+            inputs = scanner.nextInt();
+            nums[i]= inputs;
         }
         
-        // Checks if there are any duplicates
-        int multiCount = 0;
-        int totalCount = 0;
-        for (double value : inputs){
-            int dupCount = 0;
-            boolean duplicate = false;
-            
-            // Initial if number not checked yet
-            for (double value2 : inputs){
-                if (value == value2){
-                    duplicate = true;
-                    dupCount++;
+        // Determines appearances of each number
+        for (int i = 0; i < nums.length; i++) {
+            int count = 0;
+            numCount[i] = 0; 
+            // Will count itself in following program, so all numCount[i] = 1 at minimum
+            for (int j = 0; j < nums.length; j++) {
+                // Checks each number in array to see if it equals another number in array
+                if (nums[j] == nums[i]) {
+                    numCount[i] += 1;     // Parallel array syncs with current number being checked
                 }
             }
             
-            // Declares which variables are duplicates
-            if (duplicate){
-                multiple[multiCount] = inputs[totalCount]; 
-                multiCount++;
+            // Checks if number could be a new mode
+            if (numCount[i] > maxCount) {
+                maxValue = nums[i];
+                maxCount = numCount[i];
             }
-            totalCount++;
         }
-    }
-    
-    static double Mode(double[] d){
-        double mode = 0;
         
-        return mode;
+        return maxValue;
     }
-}
+    }
+
