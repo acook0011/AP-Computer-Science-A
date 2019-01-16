@@ -70,11 +70,25 @@ public class Student {
     
    public String toString(){
       String str = "Name:    " + name  + "\n";
-      for (int i = 0; i < tests.length; i++)
-         str += "test " + i + ":  " + tests[i] + "\n";
+      for (int i = 0; i < tests.length; i++){
+         int x = i + 1;
+         str += "Test " + x + ":  " + tests[i] + "\n";
+      }
       str += "Average: " + getAverage();
       return str;
    } 
+   
+   public Student Clone(){
+      Student student = new Student(null, 0);
+      student.name = name;
+      student.tests = tests;
+      return student;
+   }
+	
+   public int getNumberOfTests(){
+       return tests.length;
+   }
+
 
    //Returns null if there are no errors else returns
    //an appropriate error message.
