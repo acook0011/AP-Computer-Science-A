@@ -78,7 +78,7 @@ public class TestScoresView{
      switch (command)
 	{
 	   case 1:
-	       displayStudent();
+	       printStudent();
 	       continuePress();
 	       break;
 	   case 2:
@@ -86,7 +86,7 @@ public class TestScoresView{
 	       continuePress();
 	       break;
 	   case 3:
-	       System.out.println(model);
+	       printHighScore();
 	       continuePress();
 	       break;
 	   case 4:
@@ -94,33 +94,33 @@ public class TestScoresView{
 	       continuePress();
 	       break;
 	   case 5:
-		editStudent();
-		continuePress();
-		break;
+	       editStudent();
+	       continuePress();
+	       break;
 	   case 6:
-		addStudent();
-		continuePress();
-		break;
+	       addStudent();
+	       continuePress();
+	       break;
 	   case 7:
-		model.first();
-		continuePress();
-		break;
+	       model.first();
+	       continuePress();
+	       break;
 	   case 8:
-		model.last();
-		continuePress();
-		break;
+	       model.last();
+	       continuePress();
+	       break;
 	   case 9:
-		model.next();
-		continuePress();
-		break;
+	       model.next();
+	       continuePress();
+	       break;
 	   case 10:
-		model.previous();
-		continuePress();
-		break;
+	       model.previous();
+	       continuePress();
+	       break;
      }
    } 
    
-   private void displayStudent(){
+   private void printStudent(){
      Student student = model.currentStudent();
      if (student == null){
 	System.out.println("No student is currently selected.");
@@ -129,7 +129,7 @@ public class TestScoresView{
      }
    }
    
-   private void displayHighScore(){
+   private void printHighScore(){
      Student student = model.getHighScore();
      if (student == null){
 	System.out.println("No students have been added yet.");
@@ -141,8 +141,8 @@ public class TestScoresView{
    private void addStudent(){
        final Student student = new Student();
 
-       changeName(student);
-       changeAllScores(student);
+       setName(student);
+       setAllScores(student);
 
        String error = student.validateData();
        if (error != null){
@@ -175,18 +175,18 @@ public class TestScoresView{
        while (cont){
 	System.out.print(menu);
 
-	final int command = getCommand("Enter a number [1-5]: ", 1, 5);
+	int command = getCommand("Enter a number [1-5]: ", 1, 5);
 	switch (command){
 	    case 1:
-		changeName(student);
+		setName(student);
 		break;
 		
 	    case 2:
-		changeAllScores(student);
+		setAllScores(student);
 		break;
 
 	    case 3:
-		changeIndividualScore(student);
+		setIndividualScore(student);
 		break;
 
 	    case 4:
@@ -199,7 +199,7 @@ public class TestScoresView{
 	}
        }
 
-       final String message = temp.validateData();
+       String message = temp.validateData();
        if (message != null){
 	    System.out.println(message);
         }else{
@@ -207,25 +207,25 @@ public class TestScoresView{
         }
    }
 	
-   private void changeName(final Student student){
+   private void setName(final Student student){
       Scanner reader = new Scanner(System.in);
       System.out.print("Enter the name of the student: ");
-      final String nm = reader.nextLine();
+      String nm = reader.nextLine();
       student.setName(nm);
    }
 	
-   private void changeAllScores(final Student student){
+   private void setAllScores(final Student student){
       Scanner reader = new Scanner(System.in);
       for (int i = 1; i <= student.getNumberOfTests(); i++){
 	System.out.printf("Score on test %d: ", i);
 		
-	final int score = reader.nextInt();
+	int score = reader.nextInt();
 			
 	student.setScore(i, Math.max(0, Math.min(score, 100)));
       }
    }
    
-   private void changeIndividualScore(final Student student){
+   private void setIndividualScore(final Student student){
       int testCount = student.getNumberOfTests();
       if (testCount < 1)
       {
