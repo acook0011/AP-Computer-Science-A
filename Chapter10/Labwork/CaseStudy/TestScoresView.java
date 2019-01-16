@@ -239,9 +239,8 @@ public class TestScoresView{
       Boolean cont = true;
       while (cont){
 	System.out.printf("Test score to change [1-%d]: ", testCount);
-	testIndex = reader.nextInt(); // Read the test number
+	testIndex = reader.nextInt();
 	if (testIndex < 1 || testIndex > testCount){
-	    // Test number is invalid.  Loop again.
 	    System.out.println("That test does not exist.");
 	}else{
 	    cont = false;
