@@ -22,10 +22,16 @@ public class CodeWars1
         while(count < gallon.length && reader.hasNext()){
             int number = reader.nextInt();
             gallon[count] = number;
+            if (weeklyRate(gallon[count]) == 1){
+                weekAmount = "week";
+            }else{
+                weekAmount = "weeks";
+            }
             System.out.println(gallon[count] + " gallons per week will last " + 
-                               weeklyRate(gallon[count]) + "week.");
+                                   weeklyRate(gallon[count]) + " " + weekAmount + ".");
             count++;
         }
+        
     }
     
     static int weeklyRate(int gallon){
@@ -34,7 +40,7 @@ public class CodeWars1
         int week = 1;
         while(currentGallons > 0){
             currentGallons -= gallon;
-            if (currentGallons > 0){
+            if (currentGallons >= 0){
                 week++;
             }
         }
