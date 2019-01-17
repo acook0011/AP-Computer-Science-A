@@ -12,7 +12,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Mode
-{
+  {
     public static void main(String[] args) {
         int[] nums= new int[10];
         int[] numCount= new int[10];
@@ -28,7 +28,7 @@ public class Mode
             System.out.println(modeNum[x]);
          }
         }
-        System.out.println("If none or all print, there is no mode.");
+        System.out.println("If none print, there is no mode.");
     }
 
     public static int findMode(int[] nums, int[] numCount, int[] modeNum){

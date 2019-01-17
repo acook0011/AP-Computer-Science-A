@@ -1,4 +1,4 @@
-package Chapter10;
+package Chapter10.CodeWars;
 
 
 /**
@@ -11,7 +11,7 @@ package Chapter10;
 
 import java.util.Scanner;
 import java.io.*;
-public class CodeWars1
+public class WaterWar
 {
     public static void main(String [] args) throws IOException {
         Scanner reader = new Scanner(new File("water.txt"));
@@ -19,19 +19,22 @@ public class CodeWars1
         int count = 0;
         String weekAmount;
         
-        while(count < gallon.length && reader.hasNext()){
+        while(reader.hasNext()){
             int number = reader.nextInt();
-            gallon[count] = number;
-            if (weeklyRate(gallon[count]) == 1){
+            if (number != 0){
+            if (weeklyRate(number) == 1){
                 weekAmount = "week";
             }else{
                 weekAmount = "weeks";
             }
-            System.out.println(gallon[count] + " gallons per week will last " + 
-                                   weeklyRate(gallon[count]) + " " + weekAmount + ".");
+            System.out.println(number + " gallons per week will last " + 
+                               weeklyRate(number) + " " + weekAmount + ".");
             count++;
-        }
+            }else{
+                break;
+            }
         
+        }
     }
     
     static int weeklyRate(int gallon){
