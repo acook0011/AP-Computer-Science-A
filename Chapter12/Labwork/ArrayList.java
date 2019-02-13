@@ -68,6 +68,7 @@ public class ArrayList
             for (int i = x + 2; i < logicalSize; i++){
                 
             }
+            array[x] = a;
         } else{
             return false;
         }
