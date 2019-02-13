@@ -23,11 +23,6 @@ public class ArrayList
     }
     
     public ArrayList(Object[] a){
-        array = a; //need to make new object to refer to new
-        int i;
-        for (i = 0; i < a.length; i++){
-            array[i] = a[i];
-        }
-        logicalSize = i;
+        this.logicalSize = a.logicalSize;
     }
 }
