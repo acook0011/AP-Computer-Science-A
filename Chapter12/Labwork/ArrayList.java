@@ -60,20 +60,21 @@ public class ArrayList
     // 12.3
     public Boolean add(int x, Object a){
         Boolean poss = false;
-        if (array.length >= logicalSize+1){
-            logicalSize++;
-            Object current = array[x];
-            array[x] = a;
-            array[x+1] = current;
-            for (int i = x + 2; i < logicalSize; i++){
-                
-            }
-            array[x] = a;
-        } else{
-            return false;
+        if (array.length == logicalSize){
+            return poss;
         }
-        
-        
+        if (x < 0){
+            x = 0;
+        }
+        if (x >= logicalSize){
+            x = logicalSize;
+        }
+        for (int i = logicalSize; i > x; i--){
+            array[i] = array[i - 1];
+        }
+        array[x] = a;
+        logicalSize++;
+        poss = true;
         return poss;
     }
     
@@ -81,12 +82,10 @@ public class ArrayList
         Object rem = 0;
         if(x < 0 || x > logicalSize-1) throw new IndexOutOfBoundsException();
         rem = array[x];
-        for (int i = x; i < logicalSize; i++){
+        for (int i = x; i < logicalSize-1; i++){
             array[i] = array[i+1];
         }
         logicalSize--;
         return rem;
     }
-    
-   
 }
