@@ -14,7 +14,7 @@ public class TrackGolfScores {
              if (fileName.equalsIgnoreCase("q")) 
             	break;
              System.out.println("Enter the par of the course: ");
-             int par = reader.nextInt();
+             int par = reader.nextInt(); // Average score per course: 72
              
              // Instantiate a golf score card and initialize it with the
              // data from a file
