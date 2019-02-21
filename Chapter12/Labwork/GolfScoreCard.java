@@ -120,16 +120,19 @@ public class GolfScoreCard {
     // Return the handicap for the scorecard.
     // 12.8
     public double getHandicap (int par){
-        int numDays = dates.length;
+        double numDays = dates.length;
+        double scorePar = par*numDays; // Takes par of the course and multiply for each day
         double sum = 0;
+        // Counts up the total score from every hole on each day.
         for (int i = 0; i < numDays; i++){
             for (int j = 0; j < 18; j++)
                 sum += scores[i][j];
         }
-        double handicap = sum - par;
+        // 
+        double handicap = (sum - scorePar)/numDays;
+        // If par is greater than sum, get rid of negative
         if (handicap <= 0)
             handicap = 0;
-        
         return handicap;
     }
     

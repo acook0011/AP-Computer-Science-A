@@ -26,7 +26,7 @@ public class TrackGolfScores {
              System.out.println("\nHere is the complete history of scores: \n" + card);
              System.out.println(card.highLowDays());
              System.out.println(card.bestWorstHoles());
-             System.out.println("\nHandicap: " + card.getHandicap(par));
+             System.out.println("\nHandicap of scoreboard: " + card.getHandicap(par));
         }         	
     }
 }
