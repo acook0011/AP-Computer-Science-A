@@ -117,6 +117,22 @@ public class GolfScoreCard {
         return str;
     }
     
+    // Return the handicap for the scorecard.
+    // 12.8
+    public double getHandicap (int par){
+        int numDays = dates.length;
+        double sum = 0;
+        for (int i = 0; i < numDays; i++){
+            for (int j = 0; j < 18; j++)
+                sum += scores[i][j];
+        }
+        double handicap = sum - par;
+        if (handicap <= 0)
+            handicap = 0;
+        
+        return handicap;
+    }
+    
     // Return the average for the indicated hole
     private double holeAverage (int j){
         int numDays = dates.length;

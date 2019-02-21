@@ -13,16 +13,20 @@ public class TrackGolfScores {
              String fileName = reader.next();
              if (fileName.equalsIgnoreCase("q")) 
             	break;
+             System.out.println("Enter the par of the course: ");
+             int par = reader.nextInt();
              
              // Instantiate a golf score card and initialize it with the
              // data from a file
              GolfScoreCard card = new GolfScoreCard(fileName);
+            
 
              // Display the original data, the best and worst days, and the 
              // best and worst holes
              System.out.println("\nHere is the complete history of scores: \n" + card);
              System.out.println(card.highLowDays());
              System.out.println(card.bestWorstHoles());
+             System.out.println("\nHandicap: " + card.getHandicap(par));
         }         	
     }
 }

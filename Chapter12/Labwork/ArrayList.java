@@ -16,13 +16,13 @@ public class ArrayList
     // Without arguments
     public ArrayList(){
         array = new Object[5];
-        logicalSize = 5;
+        logicalSize = 0;
     }
     
     // With int arguments
     public ArrayList(int size){
         array = new Object[size];
-        logicalSize = size;
+        logicalSize = 0;
     }
     
     // With array of object argument
@@ -79,12 +79,13 @@ public class ArrayList
     }
     
     public Object remove(int x) throws IndexOutOfBoundsException {
-        Object rem = 0;
+        Object rem = null;
         if(x < 0 || x > logicalSize-1) throw new IndexOutOfBoundsException();
         rem = array[x];
         for (int i = x; i < logicalSize-1; i++){
             array[i] = array[i+1];
         }
+        array[logicalSize-1] = null;
         logicalSize--;
         return rem;
     }
