@@ -26,7 +26,7 @@ public class ArrayList
     }
     
     // With array of object argument
-    public ArrayList(ArrayList[] a){
+    public ArrayList(Object[] a){
         array = new Object[a.length];
         for (int i = 0; i < a.length; i++){
             Object ar = a[i];

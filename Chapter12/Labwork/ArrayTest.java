@@ -31,6 +31,7 @@ public class ArrayTest
         AL1.add(1, "seven");
         AL1.add(-2, "public static void main(String[] args){");
         System.out.println("ArrayList AL1\nLogical Size: " + AL1.size() + "\n" + AL1);   
+        System.out.println("AL1[1] = " + AL1.get(1) + "\n");
         
         AL2.add(0, d);
         AL2.add(1, 5);
@@ -39,6 +40,7 @@ public class ArrayTest
         AL2.add(3, "don't");
         AL2.remove(3);
         System.out.println("ArrayList AL2\nLogical Size: " + AL2.size() + "\n" + AL2);
+        System.out.println("AL2[3] = " + AL2.get(3));
         
         // sos I can't get array of object constructor to work???
         // or I can't figure out the proper code to let me test it
