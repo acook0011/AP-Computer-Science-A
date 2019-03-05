@@ -111,8 +111,9 @@ public class GolfScoreCard {
             }
         }
         
-        str += "The best hole:  " + bestHole  + " Average score: " + high + "\n";
-        str += "The worst hole: " + worstHole + " Average score: " + low  + "\n";
+        
+        str += "The best hole: " + worstHole + " Average score: " + low  + "\n";
+        str += "The worst hole:  " + bestHole  + " Average score: " + high + "\n";
         
         return str;
     }
