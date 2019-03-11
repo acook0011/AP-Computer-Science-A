@@ -30,6 +30,7 @@ public class Comma
         else if (n < 1000) {
             return x;
         }
+        // n%1000 (n/10)%10 (n/100)%10
         if (x.length() % 3 == 1){
             return x.substring(0, 1) + "," + insertCommas(Integer.valueOf(x.substring(1)));
         }
