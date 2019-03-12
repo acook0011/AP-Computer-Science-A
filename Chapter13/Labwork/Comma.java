@@ -10,35 +10,37 @@ package Chapter13.Labwork;
 public class Comma
 {
     public static void main(String [] args){
-        System.out.println(insertCommas(1000));
-        System.out.println(insertCommas(999));
-        System.out.println(insertCommas(2));
-        System.out.println(insertCommas(2222222));
-        System.out.println(insertCommas(436789));
-        System.out.println(insertCommas(436789321));
-        System.out.println(insertCommas(555000234));
+        System.out.println(insertComma(1000));
+        System.out.println(insertComma(10020));
+        System.out.println(insertComma(100020));
+        System.out.println(insertComma(1000020));
+        System.out.println(insertComma(999));
+        System.out.println(insertComma(2));
+        System.out.println(insertComma(2222222));
+        System.out.println(insertComma(7773453));
+        System.out.println(insertComma(436789));
+        System.out.println(insertComma(436789321));
+        System.out.println(insertComma(400009700));
+        System.out.println(insertComma(555100234));
     }
     
-    static String insertCommas(int n){
-        String x = Integer.toString(n); // Casts n to a string
-        if (n < 0) { // Assures is not negative value
+    static String insertComma(int n){
+        String x = Integer.toString(n);
+        if (n < 0) {
             return "Negative numbers don't have rights.";
         }
-        if (n == 0) { // 
-            return "000";
-        } 
-        else if (n < 1000) {
-            return x;
+        if (n < 1000) {
+            return Integer.toString(n);
         }
-        // n%1000 (n/10)%10 (n/100)%10
-        if (x.length() % 3 == 1){
-            return x.substring(0, 1) + "," + insertCommas(Integer.valueOf(x.substring(1)));
+        if (n % 1000 == 0) {
+            return insertComma(n/1000) + ",000";
         }
-        else if (x.length() % 3 == 2){
-            return x.substring(0, 2) + "," + insertCommas(Integer.valueOf(x.substring(2)));
+        if ((n/10) % 10 == 0) {
+            return insertComma(n/1000) + ",00" + Integer.toString(n%10);
         }
-        else {
-            return x.substring(0, 3) + "," + insertCommas(Integer.valueOf(x.substring(3)));
+        if ((n/100) % 10 == 0) {
+            return insertComma(n/1000) + ",0" + Integer.toString(n%100);
         }
+        return insertComma(n/1000) + "," + Integer.toString(n%1000);
     }
 }
