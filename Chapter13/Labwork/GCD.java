@@ -14,6 +14,9 @@ public class GCD
         System.out.println("gcd(3,6)   =  " + gcd(3,6));
         System.out.println("gcd(6,3)   =  " + gcd(6,3));
         System.out.println("gcd(24,30) =  " + gcd(24,30));
+        System.out.println("gcd(35,5)  =  " + gcd(35,5));
+        System.out.println("gcd(84,93) =  " + gcd(84,93));
+        System.out.println("gcd(3,943) =  " + gcd(2,943));
     }
     
     static int gcd(int a, int b){
