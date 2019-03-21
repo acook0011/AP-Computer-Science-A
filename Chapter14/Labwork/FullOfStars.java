@@ -29,6 +29,7 @@ public class FullOfStars
         sky.add("stars");
         System.out.println(addStars(sky));
         System.out.println(removeStars(sky));
+        System.out.println(removeStars(sky)); // Tests it just removes *
     }
     
     public static ArrayList<String> addStars(ArrayList<String> a1){

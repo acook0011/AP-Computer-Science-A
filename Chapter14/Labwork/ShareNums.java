@@ -13,7 +13,7 @@ public class ShareNums
 {
     public static void main(String [] args){
         ArrayList<Integer> list1 = new ArrayList<Integer>();
-        list1.add(1);
+        list1.add(1); 
         list1.add(1);
         list1.add(4);
         list1.add(4);
