@@ -26,9 +26,9 @@ public class ReadWords
             System.out.println(w);
         }
         
-        // Sorts in backwards alphabetical order
+        // Sorts in reverse order
         Collections.reverse(words);
-        System.out.println("~ArrayList sorted in reverse alphabetical order~");
+        System.out.println("~ArrayList sorted in reverse order~");
         // Prints
         for (String w : words){
             System.out.println(w);

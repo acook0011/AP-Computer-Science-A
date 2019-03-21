@@ -28,13 +28,14 @@ public class ReadNums
             sum += i;
             count++;
         }
+        System.out.println("ArrayList:    " + nums);
         Integer average = sum/count;
-        System.out.println("Average:   " + average);
+        System.out.println("Average:       " + average);
         
         // Finds the lowest and highest
         Collections.sort(nums);
-        System.out.println("Highest #: " + nums.get(nums.size()-1));
-        System.out.println("Lowest #:  " + nums.get(0));
+        System.out.println("Highest #:     " + nums.get(nums.size()-1));
+        System.out.println("Lowest #:      " + nums.get(0));
         
         // Filters out even numbers
         for (int i = 0; i < nums.size(); i++){
@@ -43,6 +44,6 @@ public class ReadNums
                 i--;
             }
         }
-        System.out.println("Odd numbers: " + nums);
+        System.out.println("Odd numbers:  " + nums);
     }
 }
