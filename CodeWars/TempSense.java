@@ -9,10 +9,12 @@ package CodeWars;
 
 import java.util.*;
 import java.io.*;
+import java.text.DecimalFormat;
 public class TempSense
 {
     public static void main(String [] args) throws IOException{
         Scanner reader = new Scanner(new File("sensors.txt"));
+        DecimalFormat df = new DecimalFormat("###.#");
         int count = reader.nextInt(); // Total calculations to go through
         
         while (count != 0){
@@ -24,7 +26,7 @@ public class TempSense
             double m = (c1-c0)/(t1-t0); // Slope
             // Equation (point-slope formula): c - c0 = m(t - t0)
             double c = m*(t-t0) + c0;
-            System.out.println(c); // Answer
+            System.out.println(df.format(c));
             count--;
         }
     }
