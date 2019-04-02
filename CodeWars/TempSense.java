@@ -1,10 +1,10 @@
-package Chapter10.CodeWars;
+package CodeWars;
 
 /**
  * Calculates the temperature of a sensor using two calibration values and current sensor value
  *
  * @aj
- * @codewars5
+ * @codewars.5
  */
 
 import java.util.*;

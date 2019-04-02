@@ -1,11 +1,11 @@
-package Chapter10.CodeWars;
+package CodeWars;
 
 
 /**
  * Eliminate the letters that don't belong.
  *
  * @aj
- * @codewars4
+ * @codewars.4
  */
 
 import java.util.Scanner;

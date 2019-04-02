@@ -1,4 +1,4 @@
-package Chapter10.CodeWars;
+package CodeWars;
 
 
 /**
